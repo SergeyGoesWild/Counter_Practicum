@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelCounter.text = "Значение счётчика: \(valueCounter)"
-        buttonPlus.tintColor = .blue
-        buttonMinus.tintColor = .red
+        buttonPlus.tintColor = .red
+        buttonMinus.tintColor = .tintColor
     }
 
     @IBAction func plusButtonPressed(_ sender: Any) {
@@ -31,5 +31,10 @@ class ViewController: UIViewController {
         if valueCounter < 0 { valueCounter = 0 }
         labelCounter.text = "Значение счётчика: \(valueCounter)"
     }
+    @IBAction func zeroButtonPressed(_ sender: Any) {
+        valueCounter = 0
+        labelCounter.text = "Значение счётчика: \(valueCounter)"
+    }
+    
 }
 
